@@ -38,11 +38,11 @@ int counter;
 void TIM2_IRQHandler()
 {
 
-	if ((TIM2->SR & TIM_SR_UIF) !=0) // Check interrupt source is from the ‘Update’ interrupt flag
+	if ((TIM2->SR & TIM_SR_UIF) !=0) // Check interrupt source is from the â€˜Updateâ€™ interrupt flag
 	{	
 	GPIOE->BSRRH = (counter << 8);
 	
 	counter++;
 	}
-	TIM2->SR &= ~TIM_SR_UIF; // Reset ‘Update’ interrupt flag in the SR register
+	TIM2->SR &= ~TIM_SR_UIF; // Reset â€˜Updateâ€™ interrupt flag in the SR register
 {
